@@ -19,7 +19,6 @@ cases."
 https://stackoverflow.com/questions/164163/quicksort-choosing-the-pivot
 */
 
-const nums1 = [11, 8, 14, 3, 6, 2, 7];
 /* 
 There are many possible answers for nums1 depending on which number is chosen
 as the pivot.
@@ -30,9 +29,6 @@ numbers smaller than 3 are to the left and larger numbers are to the right
 [2, 3, 8, 7, 11, 6, 14]
 [2, 3, 8, 6, 14, 7, 11]
 */
-const nums2 = [11, 8, 14, 3, 3, 3, 6, 2, 7];
-const nums3 = [5, 17, 12, 3, 9, 13, 21, 4, 27];
-const nums4 = [2, 1];
 
 /**
  * Partitions the given array in-place by selecting the number at the middle
@@ -50,6 +46,12 @@ const nums4 = [2, 1];
  *    being processed.
  * @returns {Array<number>} The idx where left section of smaller items ends.
  */
+
+const nums1 = [11, 8, 14, 3, 6, 2, 7];
+const nums2 = [11, 8, 14, 3, 3, 3, 6, 2, 7];
+const nums3 = [5, 17, 12, 3, 9, 13, 21, 4, 27];
+const nums4 = [2, 1];
+
 function partition(nums){
     let startval = nums[0];
     let count = 0;
@@ -68,9 +70,9 @@ function partition(nums){
 }
 
 console.log(partition(nums1));
-// console.log(partition(nums2));
-// console.log(partition(nums3));
-// console.log(partition(nums4));
+console.log(partition(nums2));
+console.log(partition(nums3));
+console.log(partition(nums4));
 
 
 
