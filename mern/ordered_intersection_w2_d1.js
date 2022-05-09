@@ -5,13 +5,13 @@ Output: only the shared values between the two arrays (deduped).
 Venn Diagram Visualization (bottom) https://i.ytimg.com/vi/sdflTUW6gHo/maxresdefault.jpg
 */
 
-const numsA1 = [0, 1, 2, 2, 2, 7, 9, 10, 11, 12];
-//              i
-const numsB1 = [2, 2, 6, 6, 7, 9, 14];
-//              j
-const expected1 = [2, 7];
+const numsA1 = [0, 1, 2, 2, 2, 7, 9, 9, 10, 11, 12];
+//                                   i
+const numsB1 = [2, 2, 6, 6, 7, 9, 9, 14];
+//                                j
+const expected1 = [2, 7, 9];
 
-//[2,7]
+//[2,7,9]
 
 const numsA2 = [0, 1, 2, 2, 2, 7];
 const numsB2 = [2, 2];
@@ -46,8 +46,9 @@ function orderedIntersection(sortedA, sortedB) {
         // if the two values are equal
         if (sortedA[i] == sortedB[j]){
             //push to the new nums array only IF the last value in newNums array is not equal to the current matching value 
-            //if the newNums does not include the current value, then push the value to newNums
-            if (!newNums.includes(sortedA[i])){
+            
+            if (newNums[newNums.length-1] != sortedA[i]){
+                // (!newNums.includes(sortedA[i])) this would iterate through the entire newNums list instead of just the most recently added. We can use this if the lists we are dealing with aren't ordered
                 newNums.push(sortedA[i]);
             }
             i ++;
