@@ -41,7 +41,7 @@ const expected7 = -1;
 function measureWaterLevels(waterLevels) {
     let min = waterLevels[0];
     let largestDiff = 0;
-    for (let i = 0; i < waterLevels.length; i ++){
+    for (let i = 1; i < waterLevels.length; i ++){
         if (waterLevels[i] < min){
             min = waterLevels[i];
         }
