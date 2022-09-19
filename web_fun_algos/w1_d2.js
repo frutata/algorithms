@@ -6,7 +6,7 @@ console.log(a / 2); // a = 6
 a = "hello";
 console.log(a + " hello");
 
-// PRINTS 6 hello hello
+// PRINTS 6 hello hello messages
 
 // 2
 for (var i = 0; i < 10; i++) {
