@@ -31,13 +31,13 @@ const expected3 = [1, 6];
 
 // DOESN'T WORK YET NEEDS TO BE FIXED UP
 function twoSum(nums, targetSum) {
-    console.log(`nums: ${nums}`);
-    console.log(`targetSum: ${targetSum}`);
+    // console.log(`nums: ${nums}`);
+    // console.log(`targetSum: ${targetSum}`);
     //create an indexes array to store the indexes after we find them
     let indexes = [];
     //first forloop is going to contain the first number we use
     for (i = 0; i < nums.length; i++) {
-        console.log(`index(i): ${i}, value: ${nums[i]}`);
+        // console.log(`index(i): ${i}, value: ${nums[i]}`);
         //we want to skip any numbers that are greater than our targetSum to save time
         if (nums[i] > targetSum) {
             console.log("First number larger than target")
@@ -45,7 +45,7 @@ function twoSum(nums, targetSum) {
         }
         //second forloop is going to be the second number we use in the equation
         for (j = i + 1; j < nums.length - i - 1; j++) {
-            console.log(`index(j): ${j}, value: ${nums[j]}`);
+            // console.log(`index(j): ${j}, value: ${nums[j]}`);
             if (nums[j] > targetSum) {
                 console.log("Second number larger than target")
                 continue;
