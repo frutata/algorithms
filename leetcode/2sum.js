@@ -4,9 +4,9 @@
  * @return {number[]}
  */
 
-const nums1 = [2,7,11,15];
-const target = 9;
-const expected = [0,1];
+let sums1 = [2,7,11,15];
+let output1 = 9;
+let expected1 = [0,1];
 
 var twoSum = function(nums, target) {
     
@@ -24,4 +24,4 @@ var twoSum = function(nums, target) {
     
 };
 
-console.log(twoSum(nums1, target));
+console.log(twoSum(sums1, output1));
